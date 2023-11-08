@@ -16,15 +16,15 @@ body {
     color: #5594d2;
     font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
     font-style: normal;
-    font-weight: 400;
-    font-size: 1em;
+    font-weight: 300;
+    font-size: 1.5em;
     background-color: #b40202;
 }
 
 
 #wrapper {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 ;
     max-width: 1000px;
 }
 
