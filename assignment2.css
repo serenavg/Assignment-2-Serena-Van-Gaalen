@@ -11,7 +11,16 @@ html {
     box-sizing: inherit;
 }
 
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
     color: #5594d2;
     font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
@@ -21,16 +30,36 @@ body {
     background-color: #b40202;
 }
 
-
-#wrapper {
+main {
     width: 100%;
-    margin: 0 ;
-    max-width: 1000px;
+    margin-left: 20%;
+    background-color: rgba(18, 16, 16, 0.8);
+    color: rgb(6, 163, 30);
+    padding-left: 20px;
+    padding-right: 20px;
+
 }
 
+main h3 {
+    margin-top: 2%;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgb(1, 10, 4);
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-style: normal;
+}
+
+
+
+
 h1,
-h2 {
-    color: #1e1e1e;
+h2,
+h3 {
+    color: #b40202;
     font-style: normal;
     font-weight: 100;
 }
@@ -40,50 +69,55 @@ h1 {
     margin-bottom: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
-    font-size: 2.5em;
+    font-size: 3.5em;
     text-align: center;
     text-transform: capitalize;
-    background-color: rgba(233, 158, 118, 1.00);
+    background-color: rgb(1, 10, 4);
     font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
     font-style: normal;
-    text-decoration: none;
-    text-shadow: 0px 0px;
+
 }
 
 h2 {
-    margin-top: 0.5em;
+    text-align: center;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    margin-right: 10%;
     font-size: 2.25em;
 }
 
 a {
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:link {
-    color: #FCA0A2;
+    color: rgb(244, 231, 231);
 }
 
 a:visited {
-    color: #ff944c;
+    color: rgb(240, 11, 11);
 }
 
 a:hover,
 a:active,
-a:focus {
+a:focus,
+a:thispage {
     color: #5CD56A;
     text-decoration: underline;
+    margin: 500px;
+
 }
 
 #menulink {
-    margin: 0;
+    margin: 30px;
     text-align: center;
-    background-color: #DC12A0;
+    background-color: #b40202;
     color: rgba(55, 25, 25, 1.00);
 }
 
 #menulink a {
-    color: rgba(73, 40, 40, 1.00);
+    color: rgb(11, 8, 8);
     font-weight: 200;
     text-decoration: none;
     text-transform: uppercase;
@@ -92,38 +126,34 @@ a:focus {
     padding-bottom: 0.1em;
 }
 
+#menulink a:hover {
+    color: rgb(244, 231, 231);
+}
+
+nav {
+    float: none;
+    display: block;
+}
+
 #navlinks {
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
     width: 100%;
     text-align: center;
     list-style-type: none;
-    background-color: #000000;
-    background-color: rgba(51, 34, 193, 0.67);
-    position: absolute;
-    -webkit-transition: all ease-out 0.5s;
-    transition: all ease-out 0.5;
+    transition: all ease-out 1s;
 }
 
-#navlinks.displayed {
-    top: 142px;
-    z-index: 1;
-    opacity: 1;
-}
 
-#navlinks.start {
-    display: none;
-}
 
-#navlinks.collapsed {
-    top: -12em;
-    opacity: 0;
-}
 
 #navlinks a {
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    flex: 1 0 auto;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: white;
     font-weight: 400;
     text-decoration: none;
@@ -133,97 +163,40 @@ a:focus {
 #navlinks a:active,
 #navlinks a:focus,
 #navlinks a.thispage {
-    color: #F68979
+    color: rgb(21, 157, 37);
 }
 
-#hero img {
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero video {
     max-width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#hero p {
-    color: #F8381C;
-    font-weight: 600;
-    font-size: 1.5em;
-    border-bottom-width: 3px;
-    border-bottom-style: solid;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-bottom: 20px;
-    margin-top: 10px;
-    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
-    text-decoration: none;
-    background-color: rgba(70, 65, 66, 1.00);
-}
-
-main,
-aside {
-    margin-left: 4%;
-    margin-right: 4%;
-    background-color: rgba(100, 41, 42, 0.80);
-    color: rgba(252, 229, 31, 1.00);
-    padding-left: 5px;
-}
-
-main figure {
-    width: 400px;
-    max-width: 92%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-main figure img {
-    max-width: 100%;
-}
-
-main figcaption {
-    display: block;
-    margin-top: 0.5em;
-    font-size: 0.75em;
-    text-transform: capitalize;
-}
-
-main,
-aside {
-    margin-left: 4%;
-    margin-right: 4%;
-}
-
-aside figure {
-    width: 300px;
-    max-width: 92%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-aside figure img {
-    max-width: 100%;
-}
-
-aside figcaption {
-    display: block;
-    margin-top: 0.5em;
-    font-size: 0.75em;
-    text-align: left;
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
 }
 
 .grayscale {
-    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
 
 .grayscale:hover {
-    -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
 }
+
 
 footer {
     padding-top: 20px;
@@ -234,17 +207,9 @@ footer {
     text-align: center;
 }
 
-header nav img {
-    max-width: 100%;
-    display: block;
-    width: 900px;
-    height: 600px;
-    padding-right: 50px;
-    padding-left: 60px;
-}
 
 
-@media (min-width:700px) {
+@media (min-width:500px) {
     #menulink {
         display: none;
     }
@@ -292,15 +257,6 @@ header nav img {
 
     main {
         width: 60%;
-    }
-
-    aside {
-        width: 28%;
-        margin-left: 0px;
-    }
-
-    main,
-    aside {
         margin-top: 30px;
         margin-bottom: 30px;
         float: left;
@@ -316,13 +272,13 @@ header nav img {
 
 @media (min-width:900px) {
     .floatright {
-        margin-right: 0px;
+        margin-right: auto;
         margin-left: 10px;
         float: right;
     }
 
     .floatleft {
         margin-right: 10px;
-        margin-left: 0px;
+        margin-left: auto;
     }
 }
